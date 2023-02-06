@@ -72,10 +72,15 @@ def match_text_in_image(user_input, user_input_2):
     # for a in alignments:
     #     print(format_alignment(*a))
 
+
     if ngram_lcs_result == ngram_result:
-        return ngram_lcs_result
+        final_result = ngram_lcs_result
+        final_metric = longest_lcs
     else:
         if err_lcs > ngram_levenshtein_dist:
-            return ngram_result
+            final_result = ngram_result
+            final_metric = err_lcs
         else:
-            return ngram_lcs_result
+            final_result = ngram_lcs_result
+            final_metric = ngram_levenshtein_dist
+    return final_result, final_metric

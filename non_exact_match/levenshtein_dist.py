@@ -6,7 +6,6 @@ def edit_distance(s, t):
     prefix_matrix[:, 0] = list(range(len(s) + 1))
     prefix_matrix[0, :] = list(range(len(t) + 1))
 
-    res = {}
     for i in range(1, len(s) + 1):
         for j in range(1, len(t) + 1):
             insertion = prefix_matrix[i, j - 1] + 1
