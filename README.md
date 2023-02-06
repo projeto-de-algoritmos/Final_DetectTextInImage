@@ -1,45 +1,48 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
 # NomedoProjeto
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Projeto Final<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 15/0122837  |  Davi Alves Bezerra |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+A principal ideia desse projeto é buscar um texto em uma imagem. Uma especie de Ctrl+f em uma imagem.
+Foram usadas algumas funções do projeto de programação dinâmica para busca da string e distância. 
+Há algumas limitações devido ao OCR tesseract não ter pré-processamentos nas imagens de input. E também o OCR não passou por um "Fine-tune" o que diminui sua qualidade.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+### Upload da imagem e texto de busca
+![image](https://user-images.githubusercontent.com/34287081/217076933-377d63b9-362a-400b-8e54-e360adaa647b.png)
+### Funcionamento
+O OCR faz a extração do texto com uma baixa confiabilidade em seu texto, podendo ter erros ortograficos. É feita uma busca não exata, aceitando um limite de erros para devolver o texto buscado. 
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: python 3.8.13<br>
+**Framework**: tesseract, streamlit<br>
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Instale todas as dependencias a partir do requirements
+```
+pip install -r requirements.txt
+```
+
+Por fim basta executar o comando do streamlit
+```
+streamlit run app.py
+```
+
+Geralmente a interface do streamlit abre no link
+```
+http://localhost:8501
+```
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
+Talvez seja necessario instalar o tesseract
+```
+sudo apt install tesseract-ocr -y
+```
 
 
 
