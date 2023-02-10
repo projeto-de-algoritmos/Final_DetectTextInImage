@@ -1,4 +1,4 @@
-# NomedoProjeto
+# Detect Text In Image
 
 **Conteúdo da Disciplina**: Projeto Final<br>
 
